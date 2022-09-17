@@ -45,7 +45,7 @@ class UserCard extends StatelessWidget {
                   //
                   //<<<<<Name>>>>>//
                   Text(
-                    "Name: ${data.firstName}${data.lastName}",
+                    "Name: ${data.firstName} ${data.lastName}",
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
