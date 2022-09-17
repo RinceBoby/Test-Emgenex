@@ -16,7 +16,7 @@ class UsersServices {
     try {
       var response = await DioClient.dio.get('/api/users?page=$currentpage');
       print(response.data);
-      print("Onn varamo");
+
       UserModel allUsersDetails = userModelFromJson(jsonEncode(response.data));
 
       userController.allUsers.addAll(allUsersDetails.data!);
@@ -28,7 +28,6 @@ class UsersServices {
         userController.currentPage++;
       }
     } on DioError catch (e) {
-      print("Njna vanne");
       print(e.error);
     }
   }
