@@ -36,18 +36,18 @@ class HomePage extends StatelessWidget {
       body: GetX<UserController>(initState: (state) {
         userController.getUsers();
       }, builder: (userController) {
-        if (userController.allUsers.value.isEmpty) {
+        if (userController.allUsers.isEmpty) {
           return const Center(
             child: CircularProgressIndicator(),
           );
         }
-        print(userController.allUsers.value.length);
+        print(userController.allUsers.length);
         return ListView.builder(
           controller: userController.scrollController,
-          itemCount: userController.allUsers.value.length + 1,
+          itemCount: userController.allUsers.length + 1,
           itemBuilder: (context, index) {
             if (index < userController.allUsers.length) {
-              final data = userController.allUsers.value[index];
+              final data = userController.allUsers[index];
               return InkWell(
                 onTap: () => Get.to(
                   UserDetails(index: index),

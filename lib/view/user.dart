@@ -14,7 +14,7 @@ class UserDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final data = userController.allUsers.value[index];
+    final data = userController.allUsers[index];
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(

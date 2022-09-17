@@ -16,12 +16,9 @@ class UsersServices {
     try {
       var response = await DioClient.dio.get('/api/users?page=$currentpage');
       print(response.data);
-
       UserModel allUsersDetails = userModelFromJson(jsonEncode(response.data));
-
       userController.allUsers.addAll(allUsersDetails.data!);
       userController.totalPage = allUsersDetails.totalPages!;
-
       if (currentpage == userController.totalPage) {
         userController.fullyLoaded = true;
       } else {

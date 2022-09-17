@@ -12,6 +12,7 @@ class UserController extends GetxController {
   int currentPage = 1;
 
   ScrollController scrollController = ScrollController();
+  
   //<<<<<Users>>>>>//
   Future<void> getUsers() async {
     try {
