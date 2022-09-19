@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:test_app/controller/users/users_controller.dart';
-import 'package:test_app/model/user_model.dart';
+import 'package:test_app/model/users/user_model.dart';
 import 'package:test_app/service/dio/dio_client.dart';
 
 class UsersServices {
@@ -17,6 +17,7 @@ class UsersServices {
       var response = await DioClient.dio.get('/api/users?page=$currentpage');
       print(response.data);
       UserModel allUsersDetails = userModelFromJson(jsonEncode(response.data));
+
       userController.allUsers.addAll(allUsersDetails.data!);
       userController.totalPage = allUsersDetails.totalPages!;
       if (currentpage == userController.totalPage) {

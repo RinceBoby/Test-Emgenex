@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/constants/colors.dart';
 import 'package:test_app/core/constants/dimensions.dart';
-import 'package:test_app/model/user_model.dart';
+import 'package:test_app/model/users/user_model.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({

@@ -4,6 +4,7 @@ import 'package:test_app/core/constants/colors.dart';
 import 'package:test_app/view/home/home.dart';
 
 class LoginContoller extends GetxController {
+
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
   TextEditingController emailController = TextEditingController();
@@ -27,8 +28,10 @@ class LoginContoller extends GetxController {
   }
 
   String? validateEmail(String value) {
+    
     Pattern pattern =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+
     RegExp regex = RegExp(pattern.toString());
     if (value.isEmpty) {
       return "Required Field";

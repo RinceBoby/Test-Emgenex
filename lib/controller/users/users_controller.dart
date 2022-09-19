@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:test_app/model/user_model.dart';
+import 'package:test_app/model/users/user_model.dart';
 import 'package:test_app/service/users_service/users_service.dart';
 
 class UserController extends GetxController {
